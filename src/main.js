@@ -6,6 +6,9 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import VueBootstrap from "bootstrap-vue-3";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
 createApp(App)
   .use(store)
   .use(router)

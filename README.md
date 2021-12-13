@@ -1,4 +1,4 @@
-# sklad-vue3
+# fit-vue3
 
 ## Project setup
 ```
