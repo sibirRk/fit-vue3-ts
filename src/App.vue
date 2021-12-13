@@ -1,27 +1,22 @@
 <template>
-  <div id="nav"></div>
-  <router-view />
+  <div id="app">
+    <b-container>
+      <navigation />
+      <router-view />
+    </b-container>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import navigation from '@/components/navigation.vue';
 
-#nav {
-  padding: 30px;
+export default {
+  name: 'App',
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  components: {
+    navigation,
   }
 }
-</style>
+</script>
+
+<style lang="scss" src="./main.scss"></style>
