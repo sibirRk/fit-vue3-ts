@@ -1,5 +1,7 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <b-form-group label="Текущий вес" class="mb-4">
+      <b-form-input :value="23" autocomplete="off" type="number"></b-form-input>
+    </b-form-group>
   </div>
 </template>
