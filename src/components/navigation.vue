@@ -26,17 +26,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { computed, ComputedRef, defineComponent } from 'vue';
+import { useStore } from 'vuex';
 import { useCurrentExIndex } from '@/composition/currentExIndex';
 import { useWeek } from '@/composition/week';
-import { useStore } from 'vuex';
-import { computed } from 'vue';
+import { IExercise } from '@/types';
 
-export default {
+export default defineComponent({
   name: 'Navigation',
   setup() {
     const store = useStore();
-    const collection = computed(() => store.state.collection);
+    const collection: ComputedRef<IExercise[]> = computed(() => store.state.collection);
 
     return {
       ...useCurrentExIndex(),
@@ -44,5 +45,5 @@ export default {
       collection
     }
   },
-}
+})
 </script>

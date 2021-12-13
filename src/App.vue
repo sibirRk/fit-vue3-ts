@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import navigation from '@/components/navigation.vue';
 
 export default {

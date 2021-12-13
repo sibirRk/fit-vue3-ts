@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { computed } from 'vue';
 import { useStore } from 'vuex'
 
-export function useWeek() {
+export function useWeek(): any {
   const store = useStore();
   const weeks = computed(() => store.state.weeks);
   const week = computed({

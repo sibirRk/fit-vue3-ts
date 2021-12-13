@@ -1,9 +1,7 @@
-// import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Index from '@/views/Index.vue';
 
-// const routes: Array<RouteRecordRaw> = [
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Index',
