@@ -46,7 +46,7 @@ export default createStore({
         commit('setCollection', data);
       });
     },
-    setWeight({ commit, getters }, payload) {
+    setWeight({ commit, getters }, payload): void {
       axios.put(`/exercises/${getters.currentEx.id}`, {
         weight: payload,
       });

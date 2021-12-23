@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { computed } from 'vue';
+import { computed, ComputedRef, WritableComputedRef } from 'vue';
 import { useStore } from 'vuex'
 
-export function useWeek(): any {
+export function useWeek(): {
+  weeks: ComputedRef<number[]>,
+  week: WritableComputedRef<string>
+ } {
   const store = useStore();
   const weeks = computed(() => store.state.weeks);
   const week = computed({
-    get: () => store.state.week,
-    set(value) {
+    get: (): string => store.state.week,
+    set(value): void {
       store.commit('setWeek', value);
     }
   })

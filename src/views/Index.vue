@@ -47,7 +47,6 @@ import { IExercise, ITableField, IExerciseTableItem } from '@/types/';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: {},
 
   setup() {
     const showAllColumns: Ref<boolean> = ref(false);
@@ -71,7 +70,7 @@ export default defineComponent({
 
     const weight: ComputedRef<number | string> = computed(() => currentEx.value.weight || '');
 
-    const fields = computed(() =>
+    const fields: ComputedRef<ITableField[]> = computed(() =>
       Object.keys(tableItems.value[0]).reduce((acc: ITableField[], key) => {
         if (key === 'name') acc.push({ key: 'name', label: 'Упражнение' });
 
